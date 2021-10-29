@@ -2,7 +2,7 @@
 <install4j version="9.0.5" transformSequenceNumber="9">
   <directoryPresets config="." />
   <application name="SFTP Send" applicationId="1389-2676-6857-5998" mediaDir="../../Distribution/java11/b5sftpSend" shortName="sftpSend" publisher="David Garratt" publisherWeb="https://www.commander4j.com" version="3.08" allPathsRelative="true" macVolumeId="7e8a68a2fd94926b" javaMinVersion="11" javaMaxVersion="11" jdkMode="jdk" jdkName="JDK 1.8">
-    <jreBundles jdkProviderId="Zulu" release="11/11.0.12" />
+    <jreBundles jdkProviderId="Zulu" release="11/11.0.13" />
   </application>
   <files globalExcludeSuffixes="dirClean.ok,.DS_Store" preserveSymlinks="false">
     <mountPoints>
@@ -575,14 +575,14 @@ return console.askYesNo(message, true);
   </installerGui>
   <mediaSets>
     <windows name="Windows" id="71">
-      <jreBundle manualJreEntry="true">
+      <jreBundle usePack200="false" manualJreEntry="true">
         <modules>
           <defaultModules set="jre" />
         </modules>
       </jreBundle>
     </windows>
     <macosFolder name="macOS Folder" id="72" architecture="universal">
-      <jreBundle>
+      <jreBundle usePack200="false">
         <modules>
           <defaultModules set="all" />
         </modules>
