@@ -16,8 +16,8 @@
         <pathelement location="lib/app/bcprov-jdk15on-1.69.jar"/>
         <pathelement location="lib/app/eddsa-0.3.0.jar"/>
         <pathelement location="lib/app/jzlib-1.1.3.jar"/>
-        <pathelement location="lib/app/log4j-api-2.14.1.jar"/>
-        <pathelement location="lib/app/log4j-core-2.14.1.jar"/>
+        <pathelement location="lib/app/log4j-api-2.15.0.jar"/>
+        <pathelement location="lib/app/log4j-core-2.15.0.jar"/>
         <pathelement location="lib/app/log4j-slf4j-impl-2.14.1.jar"/>
         <pathelement location="lib/app/slf4j-api-1.7.32.jar"/>
         <pathelement location="lib/app/slf4j-jdk14-1.7.32.jar"/>
