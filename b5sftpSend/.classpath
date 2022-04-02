@@ -23,7 +23,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/devonly/i4jruntime.jar"/>
-	<classpathentry kind="lib" path="lib/app/commons-io-2.11.0.jar"/>
+	<classpathentry kind="lib" path="lib/app/commons-io-2.10.0.jar"/>
 	<classpathentry kind="lib" path="lib/app/commons-codec-1.15.jar"/>
 	<classpathentry kind="lib" path="lib/mail/commons-email-1.5.jar"/>
 	<classpathentry kind="lib" path="lib/mail/javax.mail.jar"/>

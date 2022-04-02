@@ -24,7 +24,7 @@
         <pathelement location="lib/app/slf4j-simple-1.7.32.jar"/>
         <pathelement location="lib/app/sshj-0.32.0.jar"/>
         <pathelement location="lib/devonly/i4jruntime.jar"/>
-        <pathelement location="lib/app/commons-io-2.11.0.jar"/>
+        <pathelement location="lib/app/commons-io-2.10.0.jar"/>
         <pathelement location="lib/app/commons-codec-1.15.jar"/>
         <pathelement location="lib/mail/commons-email-1.5.jar"/>
         <pathelement location="lib/mail/javax.mail.jar"/>
