@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <install4j version="9.0.6" transformSequenceNumber="9">
-  <directoryPresets config="." />
+  <directoryPresets config="./Images/icons/SFTP_Send_Icons" />
   <application name="SFTP Send" applicationId="1389-2676-6857-5998" mediaDir="../../../Distribution/java11/b5sftpSend" shortName="sftpSend" publisher="David Garratt" publisherWeb="https://www.commander4j.com" version="3.20" allPathsRelative="true" macVolumeId="7e8a68a2fd94926b" javaMinVersion="11" javaMaxVersion="11" jdkMode="jdk" jdkName="JDK 1.8">
-    <jreBundles jdkProviderId="Zulu" release="11/11.0.14.1" />
+    <jreBundles jdkProviderId="Zulu" release="11/11.0.15" />
   </application>
   <files globalExcludeSuffixes="dirClean.ok,.DS_Store" preserveSymlinks="false">
     <mountPoints>
@@ -45,8 +45,8 @@
     </entries>
   </files>
   <launchers>
-    <launcher name="sftpSend_Console" id="66">
-      <executable name="sftpSend_Console" executableDir="." redirectStderr="false" executableMode="console" />
+    <launcher name="sftpSend_Console" id="66" icnsFile="./Images/icons/SFTP_Send_Icons/MyIcon.icns">
+      <executable name="sftpSend_Console" iconSet="true" iconFile="./Images/icons/SFTP_Send_Icons/icon.ico" executableDir="." redirectStderr="false" executableMode="console" />
       <java mainClass="com.commander4j.sftp.Transfer">
         <classPath>
           <archive location="sftpSend.jar" failOnError="false" />
@@ -54,9 +54,17 @@
           <directory location="lib/mail" failOnError="false" />
         </classPath>
       </java>
+      <iconImageFiles>
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_16x16.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_32x32.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_48x48.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_128x128.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_256x256.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_512x512.png" />
+      </iconImageFiles>
     </launcher>
-    <launcher name="sftpSend_Service" id="69">
-      <executable name="sftpSend_Service" executableDir="." redirectStderr="false" executableMode="service" />
+    <launcher name="sftpSend_Service" id="69" icnsFile="./Images/icons/SFTP_Send_Icons/MyIcon.icns">
+      <executable name="sftpSend_Service" iconSet="true" iconFile="./Images/icons/SFTP_Send_Icons/icon.ico" executableDir="." redirectStderr="false" executableMode="service" />
       <java mainClass="com.commander4j.sftp.Transfer">
         <classPath>
           <archive location="sftpSend.jar" failOnError="false" />
@@ -64,9 +72,16 @@
           <directory location="lib/mail" failOnError="false" />
         </classPath>
       </java>
+      <iconImageFiles>
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_16x16.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_32x32.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_48x48.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_128x128.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_256x256.png" />
+      </iconImageFiles>
     </launcher>
-    <launcher name="sftpSend_Service1" id="480">
-      <executable name="sftpSend_Service1" executableDir="." redirectStderr="false" executableMode="service" />
+    <launcher name="sftpSend_Service1" id="480" icnsFile="./Images/icons/SFTP_Send_Icons/MyIcon.icns">
+      <executable name="sftpSend_Service1" iconSet="true" iconFile="./Images/icons/SFTP_Send_Icons/icon.ico" executableDir="." redirectStderr="false" executableMode="service" />
       <java mainClass="com.commander4j.sftp.Transfer">
         <classPath>
           <archive location="sftpSend.jar" failOnError="false" />
@@ -74,9 +89,16 @@
           <directory location="lib/mail" failOnError="false" />
         </classPath>
       </java>
+      <iconImageFiles>
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_16x16.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_32x32.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_48x48.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_128x128.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_256x256.png" />
+      </iconImageFiles>
     </launcher>
-    <launcher name="sftpSend_Service2" id="478">
-      <executable name="sftpSend_Service2" executableDir="." redirectStderr="false" executableMode="service" />
+    <launcher name="sftpSend_Service2" id="478" icnsFile="./Images/icons/SFTP_Send_Icons/MyIcon.icns">
+      <executable name="sftpSend_Service2" iconSet="true" iconFile="./Images/icons/SFTP_Send_Icons/icon.ico" executableDir="." redirectStderr="false" executableMode="service" />
       <java mainClass="com.commander4j.sftp.Transfer">
         <classPath>
           <archive location="sftpSend.jar" failOnError="false" />
@@ -84,9 +106,33 @@
           <directory location="lib/mail" failOnError="false" />
         </classPath>
       </java>
+      <iconImageFiles>
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_16x16.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_32x32.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_48x48.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_128x128.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_256x256.png" />
+      </iconImageFiles>
     </launcher>
-    <launcher name="EncryptData" id="271">
-      <executable name="EncryptData" executableDir="." redirectStderr="false" executableMode="console" />
+    <launcher name="sftpSend_Service3" id="688" icnsFile="./Images/icons/SFTP_Send_Icons/MyIcon.icns">
+      <executable name="sftpSend_Service3" iconSet="true" iconFile="./Images/icons/SFTP_Send_Icons/icon.ico" executableDir="." redirectStderr="false" executableMode="service" />
+      <java mainClass="com.commander4j.sftp.Transfer">
+        <classPath>
+          <archive location="sftpSend.jar" failOnError="false" />
+          <directory location="lib/app" failOnError="false" />
+          <directory location="lib/mail" failOnError="false" />
+        </classPath>
+      </java>
+      <iconImageFiles>
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_16x16.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_32x32.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_48x48.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_128x128.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_256x256.png" />
+      </iconImageFiles>
+    </launcher>
+    <launcher name="EncryptData" id="271" icnsFile="./Images/icons/SFTP_Send_Icons/MyIcon.icns">
+      <executable name="EncryptData" iconSet="true" iconFile="./Images/icons/SFTP_Send_Icons/icon.ico" executableDir="." redirectStderr="false" executableMode="console" />
       <java mainClass="com.commander4j.util.EncryptData">
         <classPath>
           <archive location="sftpSend.jar" failOnError="false" />
@@ -94,46 +140,48 @@
           <directory location="lib/mail" failOnError="false" />
         </classPath>
       </java>
-    </launcher>
-    <launcher name="sftpSend_Service3" id="688">
-      <executable name="sftpSend_Service3" executableDir="." redirectStderr="false" executableMode="service" />
-      <java mainClass="com.commander4j.sftp.Transfer">
-        <classPath>
-          <archive location="sftpSend.jar" failOnError="false" />
-          <directory location="lib/app" failOnError="false" />
-          <directory location="lib/mail" failOnError="false" />
-        </classPath>
-      </java>
+      <iconImageFiles>
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_16x16.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_32x32.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_48x48.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_128x128.png" />
+        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_256x256.png" />
+      </iconImageFiles>
     </launcher>
   </launchers>
   <installerGui>
     <applications>
-      <application id="installer" beanClass="com.install4j.runtime.beans.applications.InstallerApplication">
+      <application id="installer" beanClass="com.install4j.runtime.beans.applications.InstallerApplication" customIcnsFile="./Images/icons/SFTP_Send_Icons/MyIcon.icns" customIcoFile="./Images/icons/SFTP_Send_Icons/icon.ico">
         <serializedBean>
           <property name="customIconImageFiles">
             <add>
               <object class="com.install4j.api.beans.ExternalFile">
-                <string>./Images/icon_16x16.png</string>
+                <string>./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_16x16.png</string>
               </object>
             </add>
             <add>
               <object class="com.install4j.api.beans.ExternalFile">
-                <string>./Images/icon_32x32.png</string>
+                <string>./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_32x32.png</string>
               </object>
             </add>
             <add>
               <object class="com.install4j.api.beans.ExternalFile">
-                <string>./Images/icon_128x128.png</string>
+                <string>./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_48x48.png</string>
               </object>
             </add>
             <add>
               <object class="com.install4j.api.beans.ExternalFile">
-                <string>./Images/icon_256x256.png</string>
+                <string>./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_128x128.png</string>
               </object>
             </add>
             <add>
               <object class="com.install4j.api.beans.ExternalFile">
-                <string>./Images/icon_512x512.png</string>
+                <string>./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_256x256.png</string>
+              </object>
+            </add>
+            <add>
+              <object class="com.install4j.api.beans.ExternalFile">
+                <string>./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_512x512.png</string>
               </object>
             </add>
           </property>
