@@ -2,6 +2,8 @@ package com.commander4j.util;
 
 import java.io.File;
 import java.net.InetAddress;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class JUtility
 {
@@ -14,6 +16,17 @@ public class JUtility
 		{
 			result = value.toString();
 		}
+
+		return result;
+	}
+	
+	public String getISODateStringFromCalendar(Calendar cal)
+	{
+		String result = "";
+		
+		SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		
+		result = format1.format(cal.getTime());
 
 		return result;
 	}
