@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<install4j version="10.0.6" transformSequenceNumber="10">
+<install4j version="10.0.7" transformSequenceNumber="10">
   <directoryPresets config="./Images/icons/SFTP_Send_Icons" />
   <application name="SFTP Send" applicationId="1389-2676-6857-5998" mediaDir="../../../Distribution/java17/b6sftpSend" shortName="sftpSend" publisher="David Garratt" publisherWeb="https://www.commander4j.com" version="4.10" allPathsRelative="true" macVolumeId="7e8a68a2fd94926b" javaMinVersion="17" javaMaxVersion="17">
-    <jreBundles jdkProviderId="Zulu" release="17/17.0.8.1" />
+    <jreBundles jdkProviderId="Zulu" release="17/17.0.10" />
   </application>
   <files globalExcludeSuffixes="dirClean.ok,.DS_Store">
     <mountPoints>
