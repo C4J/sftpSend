@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<install4j version="10.0.7" transformSequenceNumber="10">
+<install4j version="10.0.8" transformSequenceNumber="10">
   <directoryPresets config="./Images/icons/SFTP_Send_Icons" />
-  <application name="SFTP Send" applicationId="1389-2676-6857-5998" mediaDir="../../../Distribution/java17/b6sftpSend" shortName="sftpSend" publisher="David Garratt" publisherWeb="https://www.commander4j.com" version="4.10" allPathsRelative="true" macVolumeId="7e8a68a2fd94926b" javaMinVersion="17" javaMaxVersion="17">
+  <application name="SFTP Send" applicationId="1389-2676-6857-5998" mediaDir="../../../Distribution/java17/b6sftpSend" shortName="sftpSend" publisher="David Garratt" publisherWeb="https://www.commander4j.com" version="4.11" allPathsRelative="true" macVolumeId="7e8a68a2fd94926b" javaMinVersion="17" javaMaxVersion="17">
     <jreBundles jdkProviderId="Zulu" release="17/17.0.11" />
   </application>
   <files globalExcludeSuffixes="dirClean.ok,.DS_Store">
@@ -65,57 +65,6 @@
     </launcher>
     <launcher name="sftpSend_Service" id="69" icnsFile="./Images/icons/SFTP_Send_Icons/MyIcon.icns">
       <executable name="sftpSend_Service" iconSet="true" iconFile="./Images/icons/SFTP_Send_Icons/icon.ico" executableDir="." redirectStderr="false" executableMode="service" />
-      <java mainClass="com.commander4j.sftp.Transfer" vmParameters="-Dlog4j.configurationFile=./xml/config/log4j2.xml -Dfile.encoding=Cp1252">
-        <classPath>
-          <archive location="sftpSend.jar" failOnError="false" />
-          <directory location="lib/app" failOnError="false" />
-          <directory location="lib/mail" failOnError="false" />
-        </classPath>
-      </java>
-      <iconImageFiles>
-        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_16x16.png" />
-        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_32x32.png" />
-        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_48x48.png" />
-        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_128x128.png" />
-        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_256x256.png" />
-      </iconImageFiles>
-    </launcher>
-    <launcher name="sftpSend_Service1" id="480" icnsFile="./Images/icons/SFTP_Send_Icons/MyIcon.icns">
-      <executable name="sftpSend_Service1" iconSet="true" iconFile="./Images/icons/SFTP_Send_Icons/icon.ico" executableDir="." redirectStderr="false" executableMode="service" />
-      <java mainClass="com.commander4j.sftp.Transfer" vmParameters="-Dlog4j.configurationFile=./xml/config/log4j2.xml -Dfile.encoding=Cp1252">
-        <classPath>
-          <archive location="sftpSend.jar" failOnError="false" />
-          <directory location="lib/app" failOnError="false" />
-          <directory location="lib/mail" failOnError="false" />
-        </classPath>
-      </java>
-      <iconImageFiles>
-        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_16x16.png" />
-        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_32x32.png" />
-        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_48x48.png" />
-        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_128x128.png" />
-        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_256x256.png" />
-      </iconImageFiles>
-    </launcher>
-    <launcher name="sftpSend_Service2" id="478" icnsFile="./Images/icons/SFTP_Send_Icons/MyIcon.icns">
-      <executable name="sftpSend_Service2" iconSet="true" iconFile="./Images/icons/SFTP_Send_Icons/icon.ico" executableDir="." redirectStderr="false" executableMode="service" />
-      <java mainClass="com.commander4j.sftp.Transfer" vmParameters="-Dlog4j.configurationFile=./xml/config/log4j2.xml -Dfile.encoding=Cp1252">
-        <classPath>
-          <archive location="sftpSend.jar" failOnError="false" />
-          <directory location="lib/app" failOnError="false" />
-          <directory location="lib/mail" failOnError="false" />
-        </classPath>
-      </java>
-      <iconImageFiles>
-        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_16x16.png" />
-        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_32x32.png" />
-        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_48x48.png" />
-        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_128x128.png" />
-        <file path="./Images/icons/SFTP_Send_Icons/MyIcon.iconset/icon_256x256.png" />
-      </iconImageFiles>
-    </launcher>
-    <launcher name="sftpSend_Service3" id="688" icnsFile="./Images/icons/SFTP_Send_Icons/MyIcon.icns">
-      <executable name="sftpSend_Service3" iconSet="true" iconFile="./Images/icons/SFTP_Send_Icons/icon.ico" executableDir="." redirectStderr="false" executableMode="service" />
       <java mainClass="com.commander4j.sftp.Transfer" vmParameters="-Dlog4j.configurationFile=./xml/config/log4j2.xml -Dfile.encoding=Cp1252">
         <classPath>
           <archive location="sftpSend.jar" failOnError="false" />
@@ -622,21 +571,35 @@ return console.askYesNo(message, true);
     </styles>
   </installerGui>
   <mediaSets>
-    <windows name="Windows" id="71" architecture="64">
+    <windows name="Windows x64" id="71" mediaFileName="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}${compiler:sys.withJre}" customInstallBaseDir="C:\" architecture="64">
       <jreBundle usePack200="false" manualJreEntry="true">
         <modules>
           <defaultModules set="jre" />
         </modules>
       </jreBundle>
     </windows>
-    <macosFolder name="macOS Folder" id="72" architecture="universal">
+    <windows name="Windows arm64" id="791" mediaFileName="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}${compiler:sys.withJre}" customInstallBaseDir="C:\" architecture="arm64">
+      <jreBundle usePack200="false" manualJreEntry="true">
+        <modules>
+          <defaultModules set="jre" />
+        </modules>
+      </jreBundle>
+    </windows>
+    <macosFolder name="macOS Folder Intel" id="72" mediaFileName="${compiler:sys.shortName}_${compiler:sys.version}_intel_mac${compiler:sys.withJre}">
       <jreBundle usePack200="false">
         <modules>
           <defaultModules set="all" />
         </modules>
       </jreBundle>
     </macosFolder>
-    <unixInstaller name="Unix Installer" id="76">
+    <macosFolder name="macOS Folder Silicon" id="795" mediaFileName="${compiler:sys.shortName}_${compiler:sys.version}_silicon_mac${compiler:sys.withJre}" architecture="aarch64">
+      <jreBundle usePack200="false">
+        <modules>
+          <defaultModules set="all" />
+        </modules>
+      </jreBundle>
+    </macosFolder>
+    <unixInstaller name="Linux Installer" id="76" mediaFileName="${compiler:sys.shortName}_${compiler:sys.version}_linux${compiler:sys.withJre}">
       <jreBundle jreBundleSource="none" />
     </unixInstaller>
   </mediaSets>
