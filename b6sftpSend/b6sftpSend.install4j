@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <install4j version="10.0.8" transformSequenceNumber="10">
-  <directoryPresets config="./Images/icons/SFTP_Send_Icons" />
-  <application name="SFTP Send" applicationId="1389-2676-6857-5998" mediaDir="../../../Distribution/java17/b6sftpSend" shortName="sftpSend" publisher="David Garratt" publisherWeb="https://www.commander4j.com" version="4.11" allPathsRelative="true" macVolumeId="7e8a68a2fd94926b" javaMinVersion="17" javaMaxVersion="17">
+  <directoryPresets config="." />
+  <application name="SFTP Send" applicationId="1389-2676-6857-5998" mediaDir="../../../Distribution/java17/b6sftpSend" shortName="sftpSend" publisher="David Garratt" publisherWeb="https://www.commander4j.com" version="4.12" allPathsRelative="true" macVolumeId="7e8a68a2fd94926b" javaMinVersion="17" javaMaxVersion="17">
     <jreBundles jdkProviderId="Zulu" release="17/17.0.11" />
   </application>
   <files globalExcludeSuffixes="dirClean.ok,.DS_Store">
     <mountPoints>
       <mountPoint id="58" location="lib" />
-      <mountPoint id="59" location="lib/app" />
-      <mountPoint id="368" location="lib/mail" />
-      <mountPoint id="579" location="lib/license" />
       <mountPoint id="60" location="ssh" />
       <mountPoint id="61" location="xml" />
       <mountPoint id="62" location="xml/config" />
@@ -20,9 +17,12 @@
       <mountPoint id="65" />
     </mountPoints>
     <entries>
-      <dirEntry mountPoint="59" file="./lib/app" overwriteMode="1" uninstallMode="2" overrideOverwriteMode="true" overrideUninstallMode="true" subDirectory="app" />
-      <dirEntry mountPoint="368" file="./lib/mail" overwriteMode="1" uninstallMode="2" overrideOverwriteMode="true" overrideUninstallMode="true" subDirectory="mail" />
-      <dirEntry mountPoint="579" file="./lib/license" overwriteMode="1" uninstallMode="2" overrideOverwriteMode="true" overrideUninstallMode="true" subDirectory="license" />
+      <dirEntry mountPoint="58" file="./lib" overwriteMode="1" uninstallMode="2" overrideOverwriteMode="true" overrideUninstallMode="true" subDirectory="lib">
+        <exclude>
+          <entry location=".DS_Store" />
+          <entry location="devonly" />
+        </exclude>
+      </dirEntry>
       <dirEntry mountPoint="60" file="./ssh" subDirectory="ssh">
         <exclude>
           <entry location=".DS_Store" />

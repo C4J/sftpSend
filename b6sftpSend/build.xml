@@ -3,82 +3,39 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="b6sftpSend">
-    <property environment="env"/>
-    <property name="debuglevel" value="source,lines,vars"/>
-    <property name="target" value="17"/>
-    <property name="source" value="17"/>
-    <path id="b6sftpSend.classpath">
-        <pathelement location="bin"/>
-        <pathelement location="lib/app/asn-one-0.6.0.jar"/>
-        <pathelement location="lib/app/bcpkix-jdk15on-1.70.jar"/>
-        <pathelement location="lib/app/bcprov-jdk15on-1.70.jar"/>
-        <pathelement location="lib/app/eddsa-0.3.0.jar"/>
-        <pathelement location="lib/app/jzlib-1.1.3.jar"/>
-        <pathelement location="lib/app/log4j-api-2.20.0.jar"/>
-        <pathelement location="lib/app/log4j-core-2.20.0.jar"/>
-        <pathelement location="lib/app/log4j-slf4j2-impl-2.20.0.jar"/>
-        <pathelement location="lib/app/slf4j-api-2.0.7.jar"/>
-        <pathelement location="lib/app/slf4j-simple-2.0.7.jar"/>
-        <pathelement location="lib/app/sshj-0.35.0.jar"/>
-        <pathelement location="lib/devonly/i4jruntime.jar"/>
-        <pathelement location="lib/app/commons-io-2.13.0.jar"/>
-        <pathelement location="lib/app/commons-codec-1.15.jar"/>
-        <pathelement location="lib/app/slf4j-jdk14-2.0.7.jar"/>
-        <pathelement location="lib/mail/angus-activation-2.0.1.jar"/>
-        <pathelement location="lib/mail/angus-mail-2.0.2.jar"/>
-        <pathelement location="lib/mail/jakarta.activation-api-2.1.2.jar"/>
-        <pathelement location="lib/mail/jakarta.mail-api-2.1.2.jar"/>
-    </path>
-    <path id="run.Transfer.classpath">
-        <path refid="b6sftpSend.classpath"/>
-        <pathelement location="lib/app/asn-one-0.6.0.jar"/>
-        <pathelement location="lib/app/bcpkix-jdk15on-1.70.jar"/>
-        <pathelement location="lib/app/bcprov-jdk15on-1.70.jar"/>
-        <pathelement location="lib/app/eddsa-0.3.0.jar"/>
-        <pathelement location="lib/app/jzlib-1.1.3.jar"/>
-        <pathelement location="lib/app/log4j-api-2.20.0.jar"/>
-        <pathelement location="lib/app/log4j-core-2.20.0.jar"/>
-        <pathelement location="lib/app/log4j-slf4j2-impl-2.20.0.jar"/>
-        <pathelement location="lib/app/slf4j-api-2.0.7.jar"/>
-        <pathelement location="lib/app/slf4j-simple-2.0.7.jar"/>
-        <pathelement location="lib/app/sshj-0.35.0.jar"/>
-        <pathelement location="lib/devonly/i4jruntime.jar"/>
-        <pathelement location="lib/app/commons-io-2.13.0.jar"/>
-        <pathelement location="lib/app/commons-codec-1.15.jar"/>
-        <pathelement location="lib/app/slf4j-jdk14-2.0.7.jar"/>
-        <pathelement location="lib/mail/angus-activation-2.0.1.jar"/>
-        <pathelement location="lib/mail/angus-mail-2.0.2.jar"/>
-        <pathelement location="lib/mail/jakarta.activation-api-2.1.2.jar"/>
-        <pathelement location="lib/mail/jakarta.mail-api-2.1.2.jar"/>
-    </path>
-    <target name="init">
-        <mkdir dir="bin"/>
-        <copy includeemptydirs="false" todir="bin">
-            <fileset dir="src">
-                <exclude name="**/*.launch"/>
-                <exclude name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="clean">
-        <delete dir="bin"/>
-    </target>
-    <target depends="clean" name="cleanall"/>
-    <target depends="build-subprojects,build-project" name="build"/>
-    <target name="build-subprojects"/>
-    <target depends="init" name="build-project">
-        <echo message="${ant.project.name}: ${ant.file}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
-            <src path="src"/>
-            <classpath refid="b6sftpSend.classpath"/>
-        </javac>
-    </target>
-    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
-
-    <target name="Transfer">
-        <java classname="com.commander4j.sftp.Transfer" failonerror="true" fork="yes">
-            <classpath refid="run.Transfer.classpath"/>
-        </java>
-    </target>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="b6sftpSend">
+	<property environment="env"/>
+	<property name="debuglevel" value="source,lines,vars"/>
+	<property name="target" value="17"/>
+	<property name="source" value="17"/>
+	<path id="b6sftpSend.classpath">
+		<pathelement location="bin"/>
+		<fileset dir="lib">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+	<target name="init">
+		<mkdir dir="bin"/>
+		<copy includeemptydirs="false" todir="bin">
+			<fileset dir="src">
+				<exclude name="**/*.launch"/>
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+	</target>
+	<target name="clean">
+		<delete dir="bin"/>
+	</target>
+	<target depends="clean" name="cleanall"/>
+	<target depends="build-subprojects,build-project" name="build"/>
+	<target name="build-subprojects"/>
+	<target depends="init" name="build-project">
+		<echo message="${ant.project.name}: ${ant.file}"/>
+		<javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+			<src path="src"/>
+			<classpath refid="b6sftpSend.classpath"/>
+		</javac>
+	</target>
+	<target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
 </project>
