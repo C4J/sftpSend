@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <install4j version="10.0.8" transformSequenceNumber="10">
   <directoryPresets config="." />
-  <application name="SFTP Send" applicationId="1389-2676-6857-5998" mediaDir="../../../Distribution/java17/b6sftpSend" shortName="sftpSend" publisher="David Garratt" publisherWeb="https://www.commander4j.com" version="4.12" allPathsRelative="true" macVolumeId="7e8a68a2fd94926b" javaMinVersion="17" javaMaxVersion="17">
-    <jreBundles jdkProviderId="Zulu" release="17/17.0.11" />
+  <application name="SFTP Send" applicationId="1389-2676-6857-5998" mediaDir="../../../Distribution/java17/b6sftpSend" shortName="sftpSend" publisher="David Garratt" publisherWeb="https://www.commander4j.com" version="4.13" allPathsRelative="true" macVolumeId="7e8a68a2fd94926b" javaMinVersion="17" javaMaxVersion="17">
+    <jreBundles jdkProviderId="Zulu" release="17/17.0.12" />
   </application>
   <files globalExcludeSuffixes="dirClean.ok,.DS_Store">
     <mountPoints>
@@ -586,14 +586,14 @@ return console.askYesNo(message, true);
         </modules>
       </jreBundle>
     </windows>
-    <macosFolder name="macOS Folder Intel" id="72" mediaFileName="${compiler:sys.shortName}_${compiler:sys.version}_intel_mac${compiler:sys.withJre}">
+    <macosFolder name="macOS Folder Intel" id="72" mediaFileName="${compiler:sys.shortName}_${compiler:sys.version}_apple_intel${compiler:sys.withJre}">
       <jreBundle usePack200="false">
         <modules>
           <defaultModules set="all" />
         </modules>
       </jreBundle>
     </macosFolder>
-    <macosFolder name="macOS Folder Silicon" id="795" mediaFileName="${compiler:sys.shortName}_${compiler:sys.version}_silicon_mac${compiler:sys.withJre}" architecture="aarch64">
+    <macosFolder name="macOS Folder Silicon" id="795" mediaFileName="${compiler:sys.shortName}_${compiler:sys.version}_apple_silicon${compiler:sys.withJre}" architecture="aarch64">
       <jreBundle usePack200="false">
         <modules>
           <defaultModules set="all" />

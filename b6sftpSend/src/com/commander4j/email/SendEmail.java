@@ -7,6 +7,8 @@ import java.util.Properties;
 
 import org.apache.logging.log4j.Logger;
 
+import com.commander4j.util.EncryptData;
+import com.commander4j.util.JCipher;
 import com.commander4j.util.JUtility;
 import com.commander4j.xml.JXMLDocument;
 
@@ -29,6 +31,7 @@ public class SendEmail
 	private HashMap<String, distributionList> distList = new HashMap<String, distributionList>();
 	private HashMap<String, Calendar> emailLog = new HashMap<String, Calendar>();
 	private JUtility util = new JUtility();
+	private JCipher cipher = new JCipher(EncryptData.key);
 	
 	private boolean enabled = false;
 	
@@ -58,6 +61,18 @@ public class SendEmail
 			{
 				String prop = doc.findXPath("//configuration/property[" + String.valueOf(seq) + "]/@name").trim();
 				String val = doc.findXPath("//configuration/property[" + String.valueOf(seq) + "]/@value").trim();
+				String encrypted = doc.findXPath("//configuration/property[" + String.valueOf(seq) + "]/@encrypted").trim().toLowerCase();
+				
+				if (encrypted.equals(""))
+				{
+					encrypted = "no";
+				}
+				
+				if (encrypted.equals("yes"))
+				{
+					val = cipher.decode(val);
+				}
+				
 				if (prop.equals(""))
 				{
 					cont = false;
@@ -67,6 +82,7 @@ public class SendEmail
 					smtpProperties.setProperty(prop, val);
 					seq++;
 				}
+				
 			}
 
 			String addressList = "";

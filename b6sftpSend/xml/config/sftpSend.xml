@@ -9,7 +9,7 @@
 
 		<general>
 		    <value id="title" encrypted="no">SFTP Example</value>
-		 	<value id="emailEnabled" encrypted="no">false</value>
+		 	<value id="emailEnabled" encrypted="no">true</value>
 		</general>
 
         <security>
