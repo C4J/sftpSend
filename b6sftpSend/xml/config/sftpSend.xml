@@ -1,47 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-
-    <!--    Example Version-->
-
-    <!--  Standard username and password logon example -->
-    
-    <sftpSend2>
-
+	<!--    Example Version-->
+	<!--  Standard username and password logon example -->
+	<sftpSend2>
 		<general>
-		    <value id="title" encrypted="no">SFTP Example</value>
-		 	<value id="emailEnabled" encrypted="no">true</value>
+			<value id="title" encrypted="no">SFTP Example</value>
+			<value id="emailEnabled" encrypted="no">false</value>
 		</general>
-
-        <security>
-            <value id="remoteHost" encrypted="no">1.2.3.4</value>
-            <value id="remotePort" encrypted="no">22</value>
-            <value id="checkKnownHosts" encrypted="no">no</value>
-            <value id="knownHostsFile" encrypted="no">./ssh/known_hosts</value>
-            <value id="authType" encrypted="no">user password</value>
-            <value id="username" encrypted="no">testuser</value>
-            <value id="password" encrypted="no">testpassword</value>
-            <value id="privateKeyFile" encrypted="no">./ssh/sftpSend</value>
-            <value id="privateKeyPasswordProtected" encrypted="no">no</value>
-            <value id="privateKeyPassword" encrypted="no"/>
-        </security>
-
-        <source>
-            <value id="localDir" encrypted="no">./send/</value>
-            <value id="localFileMask" encrypted="no">*.xml</value>
-            <value id="backupDir" encrypted="no"></value>
-            <value id="pollFrequencySeconds" encrypted="no">5000</value>
-        </source>
-
-        <destination>
-            <value id="remoteDir" encrypted="no">/remote/</value>
-            <value id="tempFileExtension" encrypted="no">.tmp</value>
-        </destination>
-
-    </sftpSend2>
-
-    <!--  public key and username example - comment out above and uncomment below to use -->
-
-    <!--   <sftpSend2>
+		<security>
+			<value id="remoteHost" encrypted="no">1.2.3.4</value>
+			<value id="remotePort" encrypted="no">22</value>
+			<value id="checkKnownHosts" encrypted="no">no</value>
+			<value id="knownHostsFile" encrypted="no">./ssh/known_hosts</value>
+			<value id="authType" encrypted="no">user password</value>
+			<value id="username" encrypted="no">testuser</value>
+			<value id="password" encrypted="no">testpassword</value>
+			<value id="privateKeyFile" encrypted="no">./ssh/sftpSend</value>
+			<value id="privateKeyPasswordProtected" encrypted="no">no</value>
+			<value id="privateKeyPassword" encrypted="no"/>
+		</security>
+		<source>
+			<value id="localDir" encrypted="no">./send/</value>
+			<value id="localFileMask" encrypted="no">*.xml</value>
+			<value id="backupDir" encrypted="no"/>
+			<value id="pollFrequencySeconds" encrypted="no">5000</value>
+		</source>
+		<destination>
+			<value id="remoteDir" encrypted="no">/remote/</value>
+			<value id="tempFileExtension" encrypted="no">.tmp</value>
+		</destination>
+	</sftpSend2>
+	<!--  public key and username example - comment out above and uncomment below to use -->
+	<!--   <sftpSend2>
 
         <security>
             <value id="remoteHost" encrypted="no">1.2.3.4</value>
@@ -67,6 +57,4 @@
         </destination>
 
     </sftpSend2> -->
-
-
 </config>
