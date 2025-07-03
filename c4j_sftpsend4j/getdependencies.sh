@@ -1,1 +1,1 @@
-mvn -f b6sftpSend_pom.xml clean dependency:copy-dependencies
+mvn -f b7sftpSend_pom.xml clean dependency:copy-dependencies
