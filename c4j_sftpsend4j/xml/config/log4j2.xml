@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="debug" name="MyApp">
-
+  
   <Properties>
     <Property name="LOG_DIR">./logs</Property>
   </Properties>
@@ -9,30 +9,35 @@
     <Console name="Console" target="SYSTEM_OUT" ignoreExceptions="false">
       <PatternLayout pattern="%d{DEFAULT} - %msg%n"/>
     </Console>
+    
     <RollingFile
       name="rollingFile"
-      fileName="${LOG_DIR}/sftpSend.log"
-      filePattern="${LOG_DIR}/sftpSend.%i.log.gz"
+      fileName="${LOG_DIR}/SFTPSend.log"
+      filePattern="${LOG_DIR}/SFTPSend-%d{yyyy-MM-dd}-%i.log.gz"
       ignoreExceptions="false">
+      
       <PatternLayout>
-          <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</Pattern>
+        <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</Pattern>
       </PatternLayout>
+      
       <Policies>
-          <SizeBasedTriggeringPolicy size="10MB" />
+        <SizeBasedTriggeringPolicy size="10MB"/>
+        <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
       </Policies>
-      <DefaultRolloverStrategy max="5">
-        <Delete basePath="${LOG_DIR}" maxDepth="2">
-          <IfFileName glob="*/app-*.log.gz" />
-          <IfLastModified age="P30D" />
+      
+      <DefaultRolloverStrategy max="100">
+        <Delete basePath="${LOG_DIR}" maxDepth="1">
+          <IfFileName glob="SFTPSend-*.log.gz"/>
+          <IfLastModified age="P14D"/>
         </Delete>
       </DefaultRolloverStrategy>
     </RollingFile>
   </Appenders>
-
+  
   <Loggers>
     <Root level="debug">
       <AppenderRef ref="rollingFile"/>
-       <AppenderRef ref="Console"/>
+      <AppenderRef ref="Console"/>
     </Root>
     
     <Logger name="org.apache.http" level="debug">
@@ -45,8 +50,7 @@
     
     <Logger name="org.apache.http.impl.conn" level="debug">
       <AppenderRef ref="Console"/>
-    </Logger>  
-    
+    </Logger>
   </Loggers>
   
 </Configuration>
